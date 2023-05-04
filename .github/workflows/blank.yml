@@ -11,7 +11,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          cat /proc/$(pidof provisioner)/io
+          sudo cat /proc/$(pidof provisioner)/io
           sudo rustup update stable --no-self-update
-          cat /proc/$(pidof provisioner)/io
+          sudo cat /proc/$(pidof provisioner)/io
           
