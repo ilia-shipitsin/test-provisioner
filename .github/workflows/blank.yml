@@ -11,6 +11,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          ps axl
-          sudo netstat -lpn
+          cat /proc/$(pidof provisioner)/io
+          sudo rustup update stable --no-self-update
+          cat /proc/$(pidof provisioner)/io
           
